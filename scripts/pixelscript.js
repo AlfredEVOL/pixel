@@ -4,7 +4,17 @@ let blueInput = document.getElementById("blue-input")
 let sampleColour = document.getElementById("samplecolour-el")
 let randomButton = document.getElementById("random-el")
 
-let zeroZero = document.getElementById("0,0")
+
+for( let i =0;i<8;i++){
+    for(let j=0;j<8;j++){
+      const ele=document.getElementById(`${i},${j}`);
+      ele.addEventListener("click", function(){
+          ele.style.backgroundColor = getColor(redInput.value, greenInput.value, blueInput.value)
+      });
+    }
+}
+
+/*let zeroZero = document.getElementById("0,0")
 let zeroOne = document.getElementById("0,1")
 let zeroTwo = document.getElementById("0,2")
 let zeroThree = document.getElementById("0,3")
@@ -75,6 +85,7 @@ let sevenFour = document.getElementById("7,4")
 let sevenFive = document.getElementById("7,5")
 let sevenSix = document.getElementById("7,6")
 let sevenSeven = document.getElementById("7,7")
+*/
 
 function getColor(r, g, b){
   return `rgba(${r}, ${g}, ${b}, 1)`
@@ -100,7 +111,7 @@ greenInput.addEventListener("input", function(){
 blueInput.addEventListener("input", function(){
   sample()
 })
-
+/*
 zeroZero.addEventListener("click", function(){
   zeroZero.style.backgroundColor = getColor(redInput.value, greenInput.value, blueInput.value)
 })
@@ -300,3 +311,5 @@ sevenSix.addEventListener("click", function(){
 sevenSeven.addEventListener("click", function(){
   sevenSeven.style.backgroundColor = getColor(redInput.value, greenInput.value, blueInput.value)
 })
+*/
+
